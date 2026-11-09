@@ -6,9 +6,8 @@
    3) Fotos e vídeo ficam na pasta assets/.
    ============================================================= */
 const CONFIG = {
-  MODO_DEMONSTRACAO: true, // Mantém contatos desativados neste portfólio.
-  WHATSAPP: "", // Configure apenas após autorização e publicação do site real.
-  MENSAGEM: "Olá! Gostaria de saber sobre disponibilidade para agendar uma consulta."
+  WHATSAPP: "", // Número real da profissional; NÃO foi fornecido.
+  MENSAGEM: "Olá, Dra. Bárbara! Conheci seu site e gostaria de saber sobre disponibilidade para agendar uma consulta."
 };
 
 const nav = document.getElementById('nav');
@@ -24,27 +23,34 @@ nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 }));
 
 document.getElementById('year').textContent = new Date().getFullYear();
+// Demonstração de portfólio: não criar links para contatos não configurados.
 const btn = document.getElementById('whatsapp-contact');
-const note = document.getElementById('contact-info');
-const digits = CONFIG.WHATSAPP.replace(/\D/g, '');
-if (CONFIG.MODO_DEMONSTRACAO) {
-  btn.removeAttribute('target');
-  btn.removeAttribute('rel');
-  btn.addEventListener('click', e => {
-    e.preventDefault();
-    note.textContent = 'Esta é uma demonstração do botão de contato. Em um site contratado, ele poderá abrir o WhatsApp profissional com uma mensagem pronta.';
-    note.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  });
-} else if (digits.length >= 12 && digits.length <= 13) {
-  btn.href = `https://wa.me/${digits}?text=${encodeURIComponent(CONFIG.MENSAGEM)}`;
-} else {
-  btn.removeAttribute('target');
-  btn.removeAttribute('rel');
-  btn.addEventListener('click', e => {
-    e.preventDefault();
-    note.textContent = 'Contato indisponível. Configure o WhatsApp profissional antes de publicar o site definitivo.';
-  });
+const modal = document.getElementById('demo-modal');
+const dialog = modal.querySelector('.demo-dialog');
+let priorFocus = null;
+function closeDemo() {
+  modal.hidden = true;
+  document.body.classList.remove('demo-modal-open');
+  if (priorFocus) priorFocus.focus();
 }
+btn.addEventListener('click', event => {
+  event.preventDefault();
+  priorFocus = document.activeElement;
+  modal.hidden = false;
+  document.body.classList.add('demo-modal-open');
+  dialog.focus();
+});
+modal.querySelectorAll('[data-close-demo]').forEach(el => el.addEventListener('click', closeDemo));
+document.addEventListener('keydown', e => {
+  if (modal.hidden) return;
+  if (e.key === 'Escape') closeDemo();
+  if (e.key === 'Tab') {
+    const focusable = [...dialog.querySelectorAll('button')];
+    const i = focusable.indexOf(document.activeElement);
+    if (e.shiftKey && (i <= 0)) { e.preventDefault(); focusable[focusable.length-1].focus(); }
+    else if (!e.shiftKey && i === focusable.length-1) { e.preventDefault(); focusable[0].focus(); }
+  }
+});
 
 /* Capa da foto -> vídeo -> volta à foto ao terminar. */
 const presentationVideo = document.getElementById('barbara-video');
@@ -85,9 +91,3 @@ presentationCover.addEventListener('click', startPresentation);
 presentationStart.addEventListener('click', startPresentation);
 presentationVideo.addEventListener('ended', restorePhoto);
 resetPresentation.addEventListener('click', restorePhoto);
-
-// Não tente reproduzir vídeo ausente em demonstrações sem o arquivo original.
-presentationVideo.addEventListener('error', () => {
-  restorePhoto();
-  presentationStatus.textContent = 'Vídeo de exemplo não incluído. Adicione o arquivo em assets/barbara-video.mp4 para ativar.';
-});

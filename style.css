@@ -491,14 +491,24 @@ button{font:inherit}
  .presentation-start{width:100%;padding:12px}
 }
 
-/* Camada de apresentação comercial, sem alterar o layout do site-base */
-.demo-banner{position:relative;z-index:40;display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;padding:12px 24px;background:#263b34;color:#fff;font-size:13px;text-align:center;line-height:1.5}
-.demo-banner strong{letter-spacing:.09em;font-size:11px;color:#d6e4bb}
-.demo-banner a{color:#fff;border:1px solid #ffffff70;border-radius:999px;padding:6px 15px;font-weight:700;white-space:nowrap}
-.demo-banner a:hover{background:#ffffff1a}
-.developer-cta{background:#e5eae3;padding:65px 0;border-top:1px solid #d0d9ce}
-.developer-cta-inner{display:flex;align-items:center;justify-content:space-between;gap:35px}
-.developer-cta h2{font:600 clamp(32px,4vw,50px)/1.1 var(--serif);margin:12px 0;max-width:700px}
-.developer-cta p{color:var(--muted);max-width:650px}
-.developer-cta .btn{white-space:nowrap}
-@media(max-width:760px){.demo-banner{gap:8px;padding:10px 14px}.developer-cta-inner{flex-direction:column;align-items:flex-start}.developer-cta .btn{width:100%}}
+/* Modo de portfólio demonstrativo */
+.demo-ribbon{display:flex;justify-content:center;align-items:center;gap:22px;flex-wrap:wrap;padding:10px 22px;background:#2f4138;color:#fff;font:12px/1.5 var(--sans);text-align:center;letter-spacing:.015em}
+.demo-ribbon strong{letter-spacing:.10em;font-size:11px}
+.demo-ribbon a{text-decoration:underline;text-underline-offset:3px;color:#f1e5d6}
+.demo-info-section{padding:58px 0;background:#efe8df;border-top:1px solid #dcd1c5}
+.demo-info-inner{display:flex;align-items:center;justify-content:space-between;gap:26px}
+.demo-info-inner>div{max-width:730px}
+.demo-info-inner h2{font:600 clamp(30px,3.5vw,46px)/1.05 var(--serif);margin:12px 0}
+.demo-info-inner p{color:var(--muted);margin:0}
+.demo-modal[hidden]{display:none!important}
+.demo-modal{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:20px}
+.demo-modal-backdrop{position:absolute;inset:0;background:rgba(25,28,26,.65);backdrop-filter:blur(5px)}
+.demo-dialog{position:relative;width:min(510px,100%);max-height:calc(100vh - 40px);overflow:auto;background:#faf7f1;border-radius:28px;padding:clamp(24px,5vw,42px);box-shadow:0 25px 90px #0005;outline:none}
+.demo-dialog h2{font:600 44px/1 var(--serif);margin:14px 0}
+.demo-dialog p{color:#675d55;font-size:14px}
+.demo-close{position:absolute;top:15px;right:20px;border:0;background:transparent;color:#443a32;font-size:30px;cursor:pointer}
+.demo-message{background:#eee7de;padding:20px;border-radius:17px;margin:22px 0}
+.demo-message p{margin:8px 0 0;color:#443a32}
+.demo-disclaimer{font-size:12px!important}
+body.demo-modal-open{overflow:hidden}
+@media(max-width:700px){.demo-info-inner{flex-direction:column;align-items:flex-start}.demo-ribbon{gap:5px}}
