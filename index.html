@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Modelo demonstrativo de site profissional — portfólio Dev Kayko. Não realiza agendamentos." />
+  <meta name="theme-color" content="#f3efe9" />
+  <meta property="og:title" content="Modelo de Site Profissional | Dev Kayko" />
+  <meta property="og:description" content="Site demonstrativo de apresentação profissional, desenvolvido por Dev Kayko." />
+  <meta property="og:type" content="website" />
+  <title>Demonstração de Site Profissional | Dev Kayko</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="demo-mode">
+  <aside class="demo-banner" role="status"><span><strong>MODELO DEMONSTRATIVO</strong> · Exemplo de site profissional para apresentação a clientes. Agendamentos estão desativados.</span><a href="#contato-dev">Quero um site assim ↗</a></aside>
+  <div class="topbar">Psicoterapia com acolhimento, escuta e respeito à sua história</div>
+
+  <header class="header" id="inicio">
+    <div class="shell header-inner">
+      <a class="brand" href="#inicio" aria-label="Bárbara Rodrigues, página inicial">
+        <img class="brand-signature" src="assets/logo-assinatura-barbara-rodrigues.png" onerror="this.onerror=null;this.src='assets/logo-exemplo.svg'" alt="Barbara Rodrigues" />
+        <span>PSICÓLOGA · CRP 02/24493</span>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" aria-controls="nav" aria-expanded="false" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav" aria-label="Menu principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#abordagem">Atendimento</a>
+        <a href="#espaco">Consultório</a>
+        <a href="#video">Vídeo</a>
+        <a href="#agendar" class="nav-cta">Ver exemplo de agendamento</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">CUIDADO EM SAÚDE MENTAL</div>
+          <h1>Um espaço profissional e acolhedor para cuidar de <em>você.</em></h1>
+          <p>
+            A psicoterapia pode ser um caminho de escuta, reflexão e fortalecimento emocional.
+            Aqui, cada atendimento é pensado com sensibilidade, ética e respeito à singularidade de cada pessoa.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#agendar" class="btn btn-primary">Ver exemplo de agendamento</a>
+            <a href="#sobre" class="btn btn-secondary">Conhecer a profissional</a>
+          </div>
+
+          <div class="hero-cards">
+            <div class="mini-card">
+              <strong>Escuta qualificada</strong>
+              <span>Ambiente de acolhimento e respeito.</span>
+            </div>
+            <div class="mini-card">
+              <strong>CRP 02/24493</strong>
+              <span>Atendimento realizado por profissional de psicologia.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="portrait-card">
+            <img src="assets/barbara-retrato.jpg" onerror="this.onerror=null;this.src='assets/retrato-exemplo.svg'" alt="Psicóloga Bárbara Rodrigues no consultório" fetchpriority="high" />
+          </div>
+
+          <div class="credential-card">
+            <small>APRESENTAÇÃO PROFISSIONAL</small>
+            <h2>Bárbara Rodrigues</h2>
+            <p>Psicóloga • CRP 02/24493</p>
+            <div class="credential-line"></div>
+            <span>Um cuidado humano para diferentes momentos da vida.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="sobre">
+      <div class="shell about-grid">
+        <div class="about-media">
+          <div class="profile-panel">
+            <span class="profile-mark" aria-hidden="true">✦</span>
+            <span class="profile-eyebrow">PSICOLOGIA COM PROPÓSITO</span>
+            <h3>Um lugar para falar, sentir e se escutar.</h3>
+            <div class="profile-divider"></div>
+            <p>O seu tempo. A sua história. O seu processo.</p>
+            <span class="profile-crp">Bárbara Rodrigues · CRP 02/24493</span>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <span class="section-tag">SOBRE A PROFISSIONAL</span>
+          <h2>Dra. Psi Bárbara Rodrigues</h2>
+          <p>
+            Sou <strong>Bárbara Rodrigues</strong>, psicóloga registrada sob o <strong>CRP 02/24493</strong>.
+            Acredito na psicoterapia como um espaço de cuidado, presença e escuta, onde cada pessoa pode elaborar
+            suas vivências com acolhimento e sem julgamentos.
+          </p>
+          <p>
+            Meu compromisso é oferecer um ambiente ético e sensível, no qual você se sinta à vontade para falar sobre
+            emoções, relações, desafios e processos pessoais no seu próprio ritmo.
+          </p>
+
+          <div class="about-note">
+            <span>“Cuidar da saúde emocional também é uma forma de cuidado com a vida.”</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="abordagem">
+      <div class="shell">
+        <div class="section-heading centered">
+          <span class="section-tag">ATENDIMENTO PSICOLÓGICO</span>
+          <h2>Como o atendimento pode ajudar</h2>
+          <p>
+            A psicoterapia é um espaço de escuta profissional que pode contribuir para o autoconhecimento,
+            elaboração emocional e desenvolvimento de novas possibilidades diante da vida.
+          </p>
+        </div>
+
+        <div class="approach-grid">
+          <article class="approach-card">
+            <div class="icon">01</div>
+            <h3>Acolhimento</h3>
+            <p>Um espaço seguro para falar sobre o que você sente e vive, com respeito à sua história.</p>
+          </article>
+
+          <article class="approach-card">
+            <div class="icon">02</div>
+            <h3>Escuta e reflexão</h3>
+            <p>Tempo e atenção para compreender emoções, pensamentos, relações e desafios do cotidiano.</p>
+          </article>
+
+          <article class="approach-card">
+            <div class="icon">03</div>
+            <h3>Processo individual</h3>
+            <p>Cada pessoa possui um ritmo próprio, e o acompanhamento respeita essa singularidade.</p>
+          </article>
+        </div>
+
+        <div class="highlight-box">
+          <div>
+            <strong>Importante:</strong>
+            <span>Informações sobre modalidade de atendimento, horários, disponibilidade e valores podem ser confirmadas diretamente no contato.</span>
+          </div>
+          <a href="#agendar" class="text-link">Solicitar informações</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="espaco">
+      <div class="shell consultorio-grid">
+        <div class="consultorio-copy">
+          <span class="section-tag">CONSULTÓRIO</span>
+          <h2>Um ambiente pensado para acolher com leveza e tranquilidade</h2>
+          <p>
+            O espaço foi pensado para proporcionar conforto, privacidade e serenidade, favorecendo a escuta
+            e a construção de um vínculo terapêutico cuidadoso.
+          </p>
+          <ul class="feature-list">
+            <li>Ambiente reservado</li>
+            <li>Clima acolhedor e profissional</li>
+            <li>Espaço preparado para escuta atenta</li>
+          </ul>
+        </div>
+
+        <div class="space-panel">
+          <span class="space-panel-caption">ACOLHIMENTO EM CADA DETALHE</span>
+          <div class="space-detail"><span>01</span><div><strong>Privacidade</strong><p>Um espaço reservado para as suas conversas.</p></div></div>
+          <div class="space-detail"><span>02</span><div><strong>Escuta profissional</strong><p>Um momento para falar com liberdade e respeito.</p></div></div>
+          <div class="space-detail"><span>03</span><div><strong>Cuidado individualizado</strong><p>Atenção à sua história e ao seu ritmo.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- A foto é a capa; vídeo só é exibido após o clique. -->
+    <section class="section video-showcase" id="video">
+      <div class="shell">
+        <div class="video-showcase-heading">
+          <span class="section-tag">VÍDEO DE APRESENTAÇÃO</span>
+          <h2>Conheça um pouco mais sobre a profissional</h2>
+          <p>Conheça a psicóloga Bárbara Rodrigues em um breve vídeo de apresentação.</p>
+        </div>
+        <div class="showcase-player">
+          <div class="showcase-player-top"><span class="live-dot" aria-hidden="true"></span> CONHEÇA A PROFISSIONAL <span class="showcase-duration">BÁRBARA RODRIGUES · CRP 02/24493</span></div>
+          <div class="presentation-stage">
+            <button class="presentation-cover" id="play-presentation" type="button" aria-label="Assistir apresentação da psicóloga Bárbara Rodrigues">
+              <img src="assets/barbara-retrato.jpg" onerror="this.onerror=null;this.src='assets/retrato-exemplo.svg'" alt="Psicóloga Bárbara Rodrigues sorrindo no consultório" loading="lazy" />
+            </button>
+            <video id="barbara-video" controls playsinline preload="metadata" aria-label="Vídeo de apresentação da psicóloga Bárbara Rodrigues" hidden>
+              <source src="assets/barbara-video.mp4" type="video/mp4" />
+              Seu navegador não suporta vídeos HTML5. <a href="assets/barbara-video.mp4">Abrir o vídeo</a>.
+            </video>
+          </div>
+          <div class="showcase-player-bottom">
+            <div class="presentation-prompt" id="presentation-prompt">
+              <span id="presentation-status" aria-live="polite">Bárbara Rodrigues · Psicóloga</span>
+              <button class="presentation-start" id="presentation-start" type="button">Assistir ao vídeo <span aria-hidden="true">↗</span></button>
+            </div>
+            <button class="presentation-reset" id="reset-presentation" type="button" hidden>Voltar para a foto ×</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="agendar">
+      <div class="shell cta-inner">
+        <div class="cta-copy">
+          <span class="section-tag light">AGENDAMENTO</span>
+          <h2>Vamos dar o primeiro passo?</h2>
+          <p>
+            Entre em contato para tirar dúvidas, consultar horários disponíveis e solicitar seu agendamento.
+          </p>
+        </div>
+
+        <div class="cta-card">
+          <img class="cta-signature" src="assets/logo-assinatura-barbara-rodrigues.png" onerror="this.onerror=null;this.src='assets/logo-exemplo.svg'" alt="Barbara Rodrigues" />
+          <span class="cta-crp">Psicóloga • CRP 02/24493</span>
+          <a class="btn btn-light" id="whatsapp-contact" href="#agendar" target="_blank" rel="noopener noreferrer">Simular contato por WhatsApp</a>
+          <div id="contact-info" class="contact-info" role="status"></div>
+          <small>Demonstração comercial: este botão não realiza agendamentos nem envia mensagens.</small>
+        </div>
+      </div>
+    </section>
+    <section id="contato-dev" class="developer-cta" aria-labelledby="developer-title">
+      <div class="shell developer-cta-inner">
+        <div><span class="section-tag">PORTFÓLIO · DEV KAYKO</span>
+          <h2 id="developer-title">Gostou deste modelo? Imagine um site com a sua identidade.</h2>
+          <p>Este é um exemplo de apresentação profissional. Podemos personalizar cores, textos, fotos, serviços e contatos para o seu negócio.</p></div>
+        <a class="btn btn-primary" href="mailto:?subject=Quero%20um%20site%20profissional&body=Ol%C3%A1%2C%20Dev%20Kayko!%20Vi%20seu%20modelo%20de%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.">Solicitar orçamento ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo-assinatura-barbara-rodrigues.png" onerror="this.onerror=null;this.src='assets/logo-exemplo.svg'" alt="Barbara Rodrigues" class="footer-signature" />
+        <span>Psicóloga • CRP 02/24493</span>
+      </div>
+
+      <div class="footer-meta">
+        <a href="#inicio">Voltar ao topo ↑</a>
+        <span>© <span id="year">2026</span> Bárbara Rodrigues. Todos os direitos reservados.</span>
+        <small>Site desenvolvido por <a href="#contato-dev">Dev Kayko</a></small>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#contato-dev" class="floating-contact" title="Solicitar um site" aria-label="Solicitar um site profissional">Quero um site</a>
+</body>
+</html>
